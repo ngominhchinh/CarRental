@@ -1,0 +1,11 @@
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\bin\Debug\net8.0\DTO.deps.json
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\bin\Debug\net8.0\DTO.dll
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\bin\Debug\net8.0\DTO.pdb
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\obj\Debug\net8.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\obj\Debug\net8.0\DTO.AssemblyInfoInputs.cache
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\obj\Debug\net8.0\DTO.AssemblyInfo.cs
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\obj\Debug\net8.0\DTO.csproj.CoreCompileInputs.cache
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\obj\Debug\net8.0\DTO.dll
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\obj\Debug\net8.0\refint\DTO.dll
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\obj\Debug\net8.0\DTO.pdb
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\DTO\obj\Debug\net8.0\ref\DTO.dll
