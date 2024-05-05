@@ -32,6 +32,7 @@ public class AuthController : BaseController{
         if (token != null){
             JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
             var securityToken = handler.ReadJwtToken(token);
+            
             ClaimsIdentity identity = new ClaimsIdentity(securityToken.Claims,CookieAuthenticationDefaults.AuthenticationScheme);
             await HttpContext.SignInAsync(new ClaimsPrincipal(identity), new AuthenticationProperties{
                 

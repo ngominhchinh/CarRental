@@ -11,7 +11,7 @@ public class Car{
     public int PricePerDay { get; set; }
     public string Location { get; set; } = null!;
     public byte FuelId { get; set; }
-    public byte GearBoxId { get; set; }
+    public byte GearboxId { get; set; }
     public bool CarStatus { get; set; }
     public IEnumerable<CarImage>? CarImages {get; set;}
 }

@@ -58,10 +58,11 @@
                           
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">                 
                   <li><a href="index.html" class="nav-link">Trang chủ</a></li>                  
-                  <li><a href="listing.html" class="nav-link">Tìm xe</a></li>                                
-                  <li><a href="about.html" class="nav-link">Về chúng tôi</a></li>                  
+                  <li><a href="#" class="nav-link">Tìm xe</a></li>                                
+                  <li><a href="#" class="nav-link">Về chúng tôi</a></li>                  
                   @if(User.Identity != null && User.Identity.IsAuthenticated){
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>                    
+                    <li><a href="/car/add" class="nav-link">Đăng ký xe</a></li>
                     <li><a href="/auth/logout" class="nav-link">Đăng xuất</a></li>
                   } else{
                     <li><a href="/auth/login" class="nav-link">Đăng nhập</a></li>
@@ -167,6 +168,7 @@
     <script src="/js/bootstrap-datepicker.min.js"></script>
     <script src="/js/aos.js"></script>
     <script src="/js/main.js"></script>
+    
 
   </body>
 

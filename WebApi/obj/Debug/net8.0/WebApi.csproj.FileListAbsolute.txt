@@ -43,3 +43,4 @@ D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\WebApi\bin\Debug\net8.0\Microsoft.
 D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\WebApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\WebApi\bin\Debug\net8.0\WebApi.staticwebassets.runtime.json
+D:\CNTT\TTTH_.NET\Source code\WebAppCarRental\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
