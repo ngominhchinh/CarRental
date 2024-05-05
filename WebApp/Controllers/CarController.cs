@@ -11,6 +11,8 @@ public class CarController : BaseController{
     }
     [Authorize]
     public async Task<IActionResult> Add(){
+        
+        
         ViewBag.Categories = new SelectList(await Provider.Category.GetCategories(),"CategoryId","CategoryName");
         ViewBag.Manufacturers = new SelectList(await Provider.Manufacturer.GetManufacturers(),"ManufacturerId","ManufacturerName");
         ViewBag.Gearboxes = new SelectList(await Provider.Gearbox.GetGearboxes(),"GearboxId","GearboxName");
