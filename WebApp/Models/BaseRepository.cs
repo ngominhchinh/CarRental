@@ -1,9 +1,17 @@
 namespace WebApp.Models;
 public abstract class BaseRepository{
     protected Uri uri = new Uri("http://localhost:5235/api/");
-    protected async Task<IEnumerable<T>?> FetchAll<T>(string url){
+    // protected async Task<IEnumerable<T>?> FetchAll<T>(string url){
+    //     using HttpClient client = new HttpClient();
+    //     client.BaseAddress = uri;
+    //     return await client.GetFromJsonAsync<IEnumerable<T>>(url);
+    // }
+    protected async Task<IEnumerable<T>?> FetchAll<T>(string url, string? token=null){
         using HttpClient client = new HttpClient();
         client.BaseAddress = uri;
+        if(!string.IsNullOrEmpty(token)){
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+        }
         return await client.GetFromJsonAsync<IEnumerable<T>>(url);
     }
     public async  Task<int> Add<T>(string url, T obj){

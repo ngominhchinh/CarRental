@@ -14,4 +14,6 @@ public class SiteProvider{
     public ManufacturerRepository Manufacturer => manufacturer ??= new ManufacturerRepository();
     GearboxRepository gearbox =null!;
     public GearboxRepository Gearbox => gearbox ??= new GearboxRepository();
+    UploadRepository upload =null!;
+    public UploadRepository Upload => upload ??= new UploadRepository();
 }

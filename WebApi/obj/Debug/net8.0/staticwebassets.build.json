@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PTaXQvUBkAnTGlYvwwaF8cQ7CjJzV/8w2Pi2qZsbvZM=",
+  "Hash": "RrcDOColysvH+i0Zg2/Nwtja5ur8s6CR5lc1ov9SZw4=",
   "Source": "WebApi",
   "BasePath": "_content/WebApi",
   "Mode": "Default",
@@ -15,5 +15,82 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\images\\8mvrpqumn2embwj4unu3ivpv4d0e.jpg",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "images/8mvrpqumn2embwj4unu3ivpv4d0e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8mvrpqumn2embwj4unu3ivpv4d0e.jpg"
+    },
+    {
+      "Identity": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\images\\bevg5pzatluhi1o1i9h9ewnof8xu.jpg",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "images/bevg5pzatluhi1o1i9h9ewnof8xu.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bevg5pzatluhi1o1i9h9ewnof8xu.jpg"
+    },
+    {
+      "Identity": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\images\\guueu3h3ovfpl5t08qtfuqvz57p.webp",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "images/guueu3h3ovfpl5t08qtfuqvz57p.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\guueu3h3ovfpl5t08qtfuqvz57p.webp"
+    },
+    {
+      "Identity": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\images\\yfe60xzu36n3k90lefqse58s3jfi.jpg",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "images/yfe60xzu36n3k90lefqse58s3jfi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\yfe60xzu36n3k90lefqse58s3jfi.jpg"
+    }
+  ]
 }

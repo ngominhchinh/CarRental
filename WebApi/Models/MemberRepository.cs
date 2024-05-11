@@ -28,7 +28,7 @@ public class MemberRepository : BaseRepository
 
     public Member? Login(LoginModel obj){
         obj.Password = Helper.Hash(obj.Password);
-        string sql = "SELECT MemberId,Email,Phone,FullName,Gender FROM Member WHERE Email = @Email AND Password =@Password";
+        string sql = "SELECT MemberId,Email,Phone,FullName,Gender,RoleId FROM Member WHERE Email = @Email AND Password =@Password";
         return connection.QuerySingleOrDefault<Member>(sql, obj);
     }
 

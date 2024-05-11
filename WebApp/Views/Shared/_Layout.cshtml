@@ -5,11 +5,32 @@
     <title>CarRental &mdash; Free Website Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/fonts/icomoon/style.css">    
+    @* <link rel="stylesheet" href="/fonts/icomoon/style.css">    
     <link rel="stylesheet" href="/css/all.min.css"/>     
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css"> *@
+    @* <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/css/aos.css"> *@
+
+    <!-- MAIN CSS -->
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    @* <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> *@
+         
+    
+    @* <script src="/js/bootstrap.bundle.min.js"></script>  
+    <script src="/js/bootstrap.min.js"></script>   *@
+    <link rel="stylesheet" href="/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
@@ -18,16 +39,12 @@
     <link rel="stylesheet" href="/css/aos.css">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/bootstrap.min.js"></script>      
-    <script src="/js/jquery-3.7.1.min.js"></script>
-
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>    
   </head>
   <body>  
     
     <div class="site-wrap" id="home-section">
-
       <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
           <div class="site-mobile-menu-close mt-3">
@@ -36,53 +53,45 @@
         </div>
         <div class="site-mobile-menu-body"></div>
       </div>
-
-
-
       <header class="site-navbar site-navbar-target" role="banner">
-
         <div class="container">
           <div class="row align-items-center position-relative">
-
             <div class="col-3">
               <div class="site-logo">
                 <a href="index.html"><strong>CarRental</strong></a>
               </div>
             </div>
-
-            <div class="col-9  text-right">
-              
+            <div class="col-9  text-right">              
               <span class="d-inline-block d-lg-none"><a href="#" class=" site-menu-toggle js-menu-toggle py-5 "><span class="icon-menu h3 text-black"></span></a></span>
 
-              <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">    
-                          
+              <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">                             
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">                 
-                  <li><a href="index.html" class="nav-link">Trang chủ</a></li>                  
-                  <li><a href="#" class="nav-link">Tìm xe</a></li>                                
-                  <li><a href="#" class="nav-link">Về chúng tôi</a></li>                  
+                  <li><a href="/" class="nav-link">Tìm xe</a></li>                                   
                   @if(User.Identity != null && User.Identity.IsAuthenticated){
-                    <li><a href="#" class="nav-link">Contact</a></li>                    
-                    <li><a href="/car/add" class="nav-link">Đăng ký xe</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>     
+                    @if(User.IsInRole("2")){
+                      <li><a href="/car/add" class="nav-link">Đăng ký xe</a></li>
+                      <li><a href="/car" class="nav-link">Xe của tôi</a></li>
+                      <li><a href="#" class="nav-link">Chuyến đi</a></li>                    
+                    }    
+                    @if(User.IsInRole("3")){                      
+                      <li><a href="#" class="nav-link">Chuyến đi</a></li>
+                    }                    
                     <li><a href="/auth/logout" class="nav-link">Đăng xuất</a></li>
                   } else{
                     <li><a href="/auth/login" class="nav-link">Đăng nhập</a></li>
-                    <li><a href="/auth/register" class="nav-link">Đăng ký</a></li>
-                    
-                  }                    
-
+                    <li><a href="/auth/register" class="nav-link">Đăng ký</a></li>                    
+                  }                   
                 </ul>
-              </nav>
-              
-            </div>
-            
+              </nav>              
+            </div>            
           </div>
         </div>
-      </header>      
-      
-      @RenderBody()      
+      </header>  
 
-      
-      <footer class="site-footer">
+      @RenderBody()
+
+    <footer class="site-footer">
         <div class="container">
           <div class="row">
             <div class="col-lg-3">
@@ -155,14 +164,22 @@
         </div>
       </footer>
 
-    </div>                   
+    </div>    
 
     <script src="/js/jquery-3.3.1.min.js"></script>
-    
-    <script src="/js/main.js"></script>
-    
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/jquery.fancybox.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <script src="/js/bootstrap-datepicker.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/main.js"></script>                 
 
   </body>
 
 </html>
-

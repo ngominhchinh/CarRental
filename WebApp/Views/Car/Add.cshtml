@@ -1,4 +1,6 @@
+
 @model Car
+
 <div asp-validation-summary="All">
     <div class="hero inner-page" style="background-image: url('/images/hero_1_a.jpg');">        
         <div class="container">
@@ -24,8 +26,11 @@
         <div class="row justify-content-center">
             <div class="col-8" >
                 <form method="post">
-                    <div>
-                        <input type="hidden" asp-for="MemberId" value="">
+                    <div class="row">
+                        <label class="col-2 form-label "></label>
+                        <div class="col-8 ">
+                            <input class="form-control" type="hidden" asp-for="MemberId" value="@ViewBag.MemberIdLogin">
+                        </div>        
                     </div>
                     <div class="row">
                         <label class="col-2 form-label " asp-for="ManufacturerId">Hãng xe</label>
@@ -86,7 +91,14 @@
                         <div class="col-8 ">
                             <input class="form-control" type="text" asp-for="Location">
                         </div>        
-                    </div>                    
+                    </div>   
+                    <div class="row">
+                        <label class="col-2 form-label " asp-for="ImageUrl">Hình ảnh</label>
+                        <div class="col-8 ">
+                            <input type="hidden" asp-for="ImageUrl">
+                            <input class="form-control" type="file" id="f" >
+                        </div>
+                    </div>                 
                     
                     <div class="row justify-content-center">
                         <button class="btn btn-outline-primary mt-3">Đăng ký</button>
@@ -96,3 +108,21 @@
         </div>
     </div>
 </div>
+<script>
+    $(f).change(function(){
+        let that = this;
+        var fd  = new FormData();
+        fd.append('f', that.files[0]);
+        $.ajax({
+            url: '/upload',
+            method: 'post',
+            data: fd,
+            contentType: false,
+            processData: false,
+            success: function (d) {
+                $(that).closest('div').append(`<img alt="images" width="100" src="http://localhost:5235/images/${d}"/>`);
+                $(ImageUrl).val(d);
+            }
+        });
+    })
+</script>

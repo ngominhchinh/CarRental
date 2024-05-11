@@ -29,7 +29,7 @@ public static class Helper{
             audience: "cse.net.vn", 
             claims: claims, 
             signingCredentials: credentials, 
-            expires: DateTime.Now.AddSeconds(60));
+            expires: DateTime.Now.AddDays(30));
         return handler.WriteToken(token);
     }
 }

@@ -12,6 +12,7 @@ public class Car{
     public string Location { get; set; } = null!;
     public byte FuelId { get; set; }
     public byte GearboxId { get; set; }
+    public string ImageUrl { get; set; } = null!;
     public bool CarStatus { get; set; }
     public IEnumerable<CarImage>? CarImages {get; set;}
 }

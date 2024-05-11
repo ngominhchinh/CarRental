@@ -29,15 +29,18 @@ public class AuthController : BaseController{
     [HttpPost]
     public async Task<IActionResult> Login(LoginModel obj){
         string? token = await Provider.Member.Login(obj);
-        if (token != null){
+        if (!string.IsNullOrEmpty(token)){
             JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
             var securityToken = handler.ReadJwtToken(token);
+            List<Claim> claims = securityToken.Claims.ToList();
+
+            claims.Add(new Claim(ClaimTypes.Authentication,token));
             
-            ClaimsIdentity identity = new ClaimsIdentity(securityToken.Claims,CookieAuthenticationDefaults.AuthenticationScheme);
+            ClaimsIdentity identity = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
             await HttpContext.SignInAsync(new ClaimsPrincipal(identity), new AuthenticationProperties{
                 
             });
-            return Redirect("/auth");
+            return Redirect("/");
         }
         ModelState.AddModelError("Message", "Login failed");
 

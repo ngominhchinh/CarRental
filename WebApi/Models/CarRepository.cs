@@ -11,12 +11,15 @@ public class CarRepository : BaseRepository
     public IEnumerable<Car> GetCars(){
         return connection.Query<Car>("SELECT * FROM Car WHERE CarStatus = 0");
     }
+    public IEnumerable<Car> GetCars(string memberId){
+        return connection.Query<Car>("SELECT * FROM Car WHERE MemberId = @Id", new{Id = memberId});
+    }
     public IEnumerable<Car>? GetCarsByMemberId(string id){
         return connection.Query<Car>("SELECT * FROM Car WHERE MemberId = @Id", new{Id = id});
     }
     public int Add(Car obj){
         obj.CarId = Helper.RandomString(16);
-        string sql = "INSERT INTO Car(CarId,MemberId,ManufacturerId,CategoryId,CarName,ProducedYear,Color,NumberPlate,PricePerDay,Location,FuelId,GearboxId) VALUES(@CarId,@MemberId,@ManufacturerId,@CategoryId,@CarName,@ProducedYear,@Color,@NumberPlate,@PricePerDay,@Location,@FuelId,@GearboxId)";
+        string sql = "INSERT INTO Car(CarId,MemberId,ManufacturerId,CategoryId,CarName,ProducedYear,Color,NumberPlate,PricePerDay,Location,FuelId,GearboxId,ImageUrl) VALUES(@CarId,@MemberId,@ManufacturerId,@CategoryId,@CarName,@ProducedYear,@Color,@NumberPlate,@PricePerDay,@Location,@FuelId,@GearboxId,@ImageUrl)";
         return connection.Execute(sql, new {
             obj.CarId,
             obj.MemberId,
@@ -29,7 +32,8 @@ public class CarRepository : BaseRepository
             obj.PricePerDay,
             obj.Location,
             obj.FuelId,
-            obj.GearboxId
+            obj.GearboxId,
+            obj.ImageUrl
         });
     }
     public int Edit(Car obj){
@@ -42,8 +46,9 @@ public class CarRepository : BaseRepository
             CarId = id
         });
     }
-    public Car? GetCar(string id){
+    public Car? Detail(string id){
         string sql = "SELECT * FROM Car WHERE CarId = @Id";
         return connection.QuerySingleOrDefault<Car>(sql, new{Id = id});
     }
+    
 }

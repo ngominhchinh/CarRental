@@ -1761,3 +1761,7 @@ h1, h2, h3, h4, h5,
   .listing p {
     color: #888;
     font-size: 14px; }
+
+.btn btn-outline-primary btn-sm mt-1{
+  background-color: blue;
+}

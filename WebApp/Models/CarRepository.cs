@@ -6,6 +6,10 @@ public class CarRepository : BaseRepository{
         
         return await FetchAll<Car>("car");
     }    
+    public async Task<IEnumerable<Car>?> GetCars(string token){
+        
+        return await FetchAll<Car>("car/cars",token);
+    } 
     public async Task<int> Add (Car obj){
         return await Add("car",obj);
     }
@@ -18,4 +22,6 @@ public class CarRepository : BaseRepository{
     public async Task<Car?> GetCar(string id){
         return await Fetch<Car>("car",id);
     }
+    
+    
 }
