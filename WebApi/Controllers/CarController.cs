@@ -26,7 +26,7 @@ public class CarController : BaseController{
     public int Add(Car obj){
         return Provider.Car.Add(obj);
     }
-    [HttpPut]
+    [HttpPut("cars"),Authorize]
     public int Edit(Car obj){
         return Provider.Car.Edit(obj);
     }

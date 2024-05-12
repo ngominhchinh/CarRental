@@ -32,6 +32,7 @@
                     <th>Năm sản xuất</th>
                     <th>Biển số</th>
                     <th>Giá cho thuê</th>
+                    <th>Tình trạng</th>
                     <th>Command</th>
                 </tr>
             </thead>
@@ -41,11 +42,18 @@
                         <td>
                             <img src="http://localhost:5235/images/@item.ImageUrl" alt="@item.CarName" class="img-fluid" height="100" width="100">
                         </td>
-                        <td>@item.ManufacturerId</td>
+                        <td>@item.ManufacturerName</td>
                         <td>@item.CarName</td>
                         <td>@item.ProducedYear</td>
                         <td>@item.NumberPlate</td>
                         <td>@item.PricePerDay.ToString("#,###")</td>
+                        <td>
+                            @if(item.CarStatus){
+                                <p>Đang cho thuê</p>
+                            } else{
+                                <p>Đang rảnh</p>
+                            }
+                        </td>
                         <td>                            
                             <a class="btn btn-outline-primary" href="/Car/Edit/@item.CarId">Sửa</a>
                             <a class="btn btn-outline-primary" href="/Car/Delete/@item.CarId">Xóa</a>                            

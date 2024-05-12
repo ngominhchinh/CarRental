@@ -1,0 +1,25 @@
+@model Category
+<div class="hero inner-page" style="background-image: url('/images/hero_1_a.jpg');">        
+    <div class="container">
+        <div class="row align-items-end ">
+            <div class="col-lg-5">
+                <div class="intro">
+                    <h1><strong></strong></h1>
+                    <div class="custom-breadcrumbs"><a href="index.html"></a> <span class="mx-2"></span> <strong></strong></div>
+                </div>                    
+
+            </div>
+        </div>
+    </div>
+</div> 
+<form method="post">
+    <input type="hidden" asp-for="CategoryId">
+    <div>
+        <label asp-for="CategoryName">Category Name</label>
+        <input type="text" asp-for="CategoryName">
+        
+    </div>
+    <div>
+        <button>Save</button>
+    </div>
+</form>

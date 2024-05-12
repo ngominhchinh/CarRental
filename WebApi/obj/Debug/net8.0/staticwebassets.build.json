@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RrcDOColysvH+i0Zg2/Nwtja5ur8s6CR5lc1ov9SZw4=",
+  "Hash": "cPNbfxYqTSqugbdgi3cXSdyTe5EygoSaWVmCVayVYxo=",
   "Source": "WebApi",
   "BasePath": "_content/WebApi",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bevg5pzatluhi1o1i9h9ewnof8xu.jpg"
+    },
+    {
+      "Identity": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\images\\g7cjgdleac1j3t2vtl5j43dev8b.jpeg",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "images/g7cjgdleac1j3t2vtl5j43dev8b.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\g7cjgdleac1j3t2vtl5j43dev8b.jpeg"
     },
     {
       "Identity": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\images\\guueu3h3ovfpl5t08qtfuqvz57p.webp",

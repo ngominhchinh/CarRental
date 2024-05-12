@@ -9,10 +9,12 @@ public class CarRepository : BaseRepository
     {
     }
     public IEnumerable<Car> GetCars(){
-        return connection.Query<Car>("SELECT * FROM Car WHERE CarStatus = 0");
+        
+        return connection.Query<Car>("GetCars",commandType:CommandType.StoredProcedure);
     }
     public IEnumerable<Car> GetCars(string memberId){
-        return connection.Query<Car>("SELECT * FROM Car WHERE MemberId = @Id", new{Id = memberId});
+        string sql = "SELECT Car.*, ManufacturerName FROM Car JOIN Manufacturer ON Car.ManufacturerId = Manufacturer.ManufacturerId WHERE MemberId = @Id";
+        return connection.Query<Car>(sql, new{Id = memberId});
     }
     public IEnumerable<Car>? GetCarsByMemberId(string id){
         return connection.Query<Car>("SELECT * FROM Car WHERE MemberId = @Id", new{Id = id});
