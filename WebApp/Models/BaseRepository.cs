@@ -23,7 +23,7 @@ public abstract class BaseRepository{
         }
         return -1;
     }
-    public async Task<int> Edit<T>(string url,T obj){
+    public async Task<int> FetchEdit<T>(string url,T obj){
         using HttpClient client = new HttpClient();
         client.BaseAddress = uri;
         HttpResponseMessage message = await client.PutAsJsonAsync<T>(url,obj);

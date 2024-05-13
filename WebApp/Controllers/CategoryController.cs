@@ -29,4 +29,11 @@ public class CategoryController : BaseController{
         return View(obj);
     }
     
+    public async Task<IActionResult> Delete(byte id){
+        int ret = await Provider.Category.Delete(id);
+        if(ret > 0){
+            return Redirect("/cateogry");
+        }
+        return Redirect("/car/category");
+    }
 }

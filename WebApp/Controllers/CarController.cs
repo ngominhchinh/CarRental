@@ -46,10 +46,9 @@ public class CarController : BaseController{
         return View(obj);
     }
     
-    public async Task<IActionResult> Edit(string id){
+    public async Task<IActionResult> Edit(string id){        
         
-        Car? car = await Provider.Car.GetCar(id);
-        return View(car);
+        return View(await Provider.Car.GetCar(id));
     }
     [HttpPost,Authorize]
     public async Task<IActionResult> Edit(Car obj){

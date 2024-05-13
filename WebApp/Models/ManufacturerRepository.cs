@@ -10,7 +10,7 @@ public class ManufacturerRepository : BaseRepository{
         return await Add("manufacturer",obj);
     }
     public async Task<int> Edit(Manufacturer obj){
-       return await Edit("manufacturer",obj);
+       return await FetchEdit("manufacturer",obj);
     }
     public async Task<int> Delete(byte id){
         return await Delete<Manufacturer>("manufacturer",id);

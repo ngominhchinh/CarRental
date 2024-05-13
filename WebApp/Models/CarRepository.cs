@@ -14,7 +14,7 @@ public class CarRepository : BaseRepository{
         return await Add("car",obj);
     }
     public async Task<int> Edit(Car obj){
-       return await Edit("car",obj);
+        return await FetchEdit("car",obj);
     }
     public async Task<int> Delete(string id){
         return await Delete<Car>("car",id);

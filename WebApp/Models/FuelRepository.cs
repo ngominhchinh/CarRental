@@ -10,7 +10,7 @@ public class FuelRepository : BaseRepository{
         return await Add("fuel",obj);
     }
     public async Task<int> Edit(Fuel obj){
-       return await Edit("fuel",obj);
+       return await FetchEdit("fuel",obj);
     }
     public async Task<int> Delete(string id){
         return await Delete<Fuel>("fuel",id);

@@ -18,5 +18,5 @@ public class Car{
     public string? GearboxName { get; set; }
     public string ImageUrl { get; set; } = null!;
     public bool CarStatus { get; set; }
-    public IEnumerable<CarImage>? CarImages {get; set;}
+    //public IEnumerable<CarImage>? CarImages {get; set;}
 }

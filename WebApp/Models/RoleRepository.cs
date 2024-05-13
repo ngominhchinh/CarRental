@@ -9,7 +9,7 @@ public class RoleRepository : BaseRepository{
         return await Add("Role",obj);
     }
     public async Task<int> Edit(Role obj){
-       return await Edit("role",obj);
+       return await FetchEdit("role",obj);
     }
     public async Task<int> Delete(byte id){
         return await Delete<Role>("role",id);

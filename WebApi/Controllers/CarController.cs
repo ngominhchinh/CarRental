@@ -19,8 +19,8 @@ public class CarController : BaseController{
         return null;
     }
     [HttpGet("{id}")]
-    public IEnumerable<Car>? GetCars(string memberId){
-        return Provider.Car.GetCars(memberId);
+    public IEnumerable<Car>? GetCar(string id){
+        return Provider.Car.GetCar(id);
     }
     [HttpPost]
     public int Add(Car obj){
@@ -34,7 +34,5 @@ public class CarController : BaseController{
     public int Delete(string id){
         return Provider.Car.Delete(id);
     }    
-    // public string? GetManufacturerByCarId(string id){
-    //     return Provider.Car.GetManufacturerByCarId(id);
-    // }
+  
 }

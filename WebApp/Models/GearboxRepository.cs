@@ -10,7 +10,7 @@ public class GearboxRepository : BaseRepository{
         return await Add("gearbox",obj);
     }
     public async Task<int> Edit(Gearbox obj){
-       return await Edit("gearbox",obj);
+       return await FetchEdit("gearbox",obj);
     }
     public async Task<int> Delete(string id){
         return await Delete<Gearbox>("gearbox",id);
