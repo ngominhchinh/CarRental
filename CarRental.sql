@@ -110,6 +110,10 @@ CREATE TABLE BookingStatus(
 	BookingStatusDescription NVARCHAR(64) NOT NULL
 );
 GO
+INSERT INTO BookingStatus VALUES
+	(1,N'Đặt xe thành công'),
+	(2,N'Đã thanh toán'),
+	(3,N'Hủy')
 --DROP DATABASE Booking
 GO
 CREATE TABLE Booking(
@@ -147,6 +151,19 @@ CREATE TABLE TripRating(
 	MemberId VARCHAR(32) REFERENCES Member(MemberId)
 );
 GO
+--DROP PROC GetCars
+CREATE PROC GetCars
+AS
+	BEGIN 
+		SELECT Car.*, ManufacturerName,CategoryName, FuelName, GearboxName
+		FROM Car JOIN Manufacturer ON Car.ManufacturerId = Manufacturer.ManufacturerId 
+				JOIN Category ON Car.CategoryId = Category.CategoryId
+				JOIN Fuel ON Car.FuelId = Fuel.FuelId
+				JOIN Gearbox ON Car.GearboxId = GearBox.GearboxId
+		WHERE CarStatus = 0
+	END
+GO
+EXEC GetCars
 
 --Select * from Category
 --DROP DATABASE booking
@@ -154,3 +171,4 @@ GO
 --SELECT * FROM Role
 --SELECT * FROM Member
 --SELECT * FROM Car
+--SELECT * FROM BookingStatus

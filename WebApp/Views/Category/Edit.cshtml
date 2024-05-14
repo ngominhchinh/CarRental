@@ -12,14 +12,17 @@
         </div>
     </div>
 </div> 
-<form method="post">
-    <input type="hidden" asp-for="CategoryId">
-    <div>
-        <label asp-for="CategoryName">Category Name</label>
-        <input type="text" asp-for="CategoryName">
-        
+<div class="row col-12 justify-content-center ml-4">
+    <div class="col-6 " >                
+        <form method="post" >
+            <input type="hidden" asp-for="CategoryId">
+            <div class="row col-6 mt-1">
+                <label class="form-label " asp-for="CategoryName">Loại xe</label>
+                <input class="form-control" type="text" asp-for="CategoryName">                
+            </div>
+            <div>
+                <button class="btn btn-outline-primary mt-3">Save</button>
+            </div>
+        </form>
     </div>
-    <div>
-        <button>Save</button>
-    </div>
-</form>
+</div>

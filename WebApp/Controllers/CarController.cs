@@ -17,6 +17,7 @@ public class CarController : BaseController{
     [Authorize]
     public async Task<IActionResult> Index(){
         string? token = User.FindFirstValue(ClaimTypes.Authentication);
+        
         if(string.IsNullOrEmpty(token)){
             return Redirect("/car");
         }
@@ -53,12 +54,10 @@ public class CarController : BaseController{
     }
     [HttpPost,Authorize]
     public async Task<IActionResult> Edit(Car obj){
-        string? memberId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if(string.IsNullOrEmpty(memberId)){
-            return Redirect("/auth/login");
-        }
-        obj.MemberId = memberId;
+        
         int ret = await Provider.Car.Edit(obj);
+        System.Console.WriteLine(ret);
+        
         if(ret > 0){
             return Redirect("/car");
         }

@@ -10,7 +10,7 @@ public class CategoryRepository : BaseRepository
     }
     public async Task<int> Add(Category obj)
     {
-        return await Add("category", obj);
+        return await FetchAdd("category", obj);
     }
     public async Task<int> Edit(Category obj)
     {        

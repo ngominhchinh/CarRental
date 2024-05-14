@@ -44,7 +44,7 @@ public class CarRepository : BaseRepository
     }
     public int Edit(Car obj){
         string sql = "UPDATE Car SET MemberId=@MemberId, ManufacturerId=@ManufacturerId, CategoryId=@CategoryId, CarName = @CarName, ProducedYear=@ProducedYear,Color=@Color,NumberPlate=@NumberPlate, PricePerDay = @PricePerDay, Location=@Location, FuelId=@FuelId,GearboxId = @GearboxId,ImageUrl=@ImageUrl WHERE CarId = @CarId";
-        //string sql = "UPDATE Car SET CarName = @CarName, "
+        
         return connection.Execute(sql, obj);
     }
     public int Delete(string id){
