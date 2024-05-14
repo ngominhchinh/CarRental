@@ -46,13 +46,18 @@ public class CarController : BaseController{
         return View(obj);
     }
     
-    public async Task<IActionResult> Edit(string id){        
+    public async Task<IActionResult> Edit(string id){     
+        
         
         return View(await Provider.Car.GetCar(id));
     }
     [HttpPost,Authorize]
     public async Task<IActionResult> Edit(Car obj){
-        
+        string? memberId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if(string.IsNullOrEmpty(memberId)){
+            return Redirect("/auth/login");
+        }
+        obj.MemberId = memberId;
         int ret = await Provider.Car.Edit(obj);
         if(ret > 0){
             return Redirect("/car");

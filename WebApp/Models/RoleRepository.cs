@@ -6,7 +6,7 @@ public class RoleRepository : BaseRepository{
         return await FetchAll<Role>("role");
     }    
     public async Task<int> Add (Role obj){
-        return await Add("Role",obj);
+        return await FetchAdd("Role",obj);
     }
     public async Task<int> Edit(Role obj){
        return await FetchEdit("role",obj);

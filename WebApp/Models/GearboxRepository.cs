@@ -7,7 +7,7 @@ public class GearboxRepository : BaseRepository{
         return await FetchAll<Gearbox>("gearbox");
     }    
     public async Task<int> Add (Gearbox obj){
-        return await Add("gearbox",obj);
+        return await FetchAdd("gearbox",obj);
     }
     public async Task<int> Edit(Gearbox obj){
        return await FetchEdit("gearbox",obj);

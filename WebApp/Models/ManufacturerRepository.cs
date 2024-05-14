@@ -7,7 +7,7 @@ public class ManufacturerRepository : BaseRepository{
         return await FetchAll<Manufacturer>("Manufacturer");
     }    
     public async Task<int> Add (Manufacturer obj){
-        return await Add("manufacturer",obj);
+        return await FetchAdd("manufacturer",obj);
     }
     public async Task<int> Edit(Manufacturer obj){
        return await FetchEdit("manufacturer",obj);

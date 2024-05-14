@@ -11,7 +11,7 @@ public class CarRepository : BaseRepository{
         return await FetchAll<Car>("car/cars",token);
     } 
     public async Task<int> Add (Car obj){
-        return await Add("car",obj);
+        return await FetchAdd("car",obj);
     }
     public async Task<int> Edit(Car obj){
         return await FetchEdit("car",obj);

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cPNbfxYqTSqugbdgi3cXSdyTe5EygoSaWVmCVayVYxo=",
+  "Hash": "te+7C60TzA/i9O0rqVa3vsMomPaT2Chu718P2l03eVI=",
   "Source": "WebApi",
   "BasePath": "_content/WebApi",
   "Mode": "Default",
@@ -93,6 +93,25 @@
       "OriginalItemSpec": "wwwroot\\images\\guueu3h3ovfpl5t08qtfuqvz57p.webp"
     },
     {
+      "Identity": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\images\\l8hue4rirvyjobfk9lop7hqbf8bl.jpg",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "images/l8hue4rirvyjobfk9lop7hqbf8bl.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\l8hue4rirvyjobfk9lop7hqbf8bl.jpg"
+    },
+    {
       "Identity": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\images\\yfe60xzu36n3k90lefqse58s3jfi.jpg",
       "SourceId": "WebApi",
       "SourceType": "Discovered",
@@ -110,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\yfe60xzu36n3k90lefqse58s3jfi.jpg"
+    },
+    {
+      "Identity": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\images\\zsv0kuzlyb1r69p07pwcsa1haxbn.jpg",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CNTT\\TTTH_.NET\\Source code\\WebAppCarRental\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "images/zsv0kuzlyb1r69p07pwcsa1haxbn.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\zsv0kuzlyb1r69p07pwcsa1haxbn.jpg"
     }
   ]
 }

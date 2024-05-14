@@ -16,9 +16,9 @@ public class CarRepository : BaseRepository
         string sql = "SELECT Car.*, ManufacturerName FROM Car JOIN Manufacturer ON Car.ManufacturerId = Manufacturer.ManufacturerId WHERE MemberId = @Id";
         return connection.Query<Car>(sql, new{Id = memberId});
     }
-    public IEnumerable<Car> GetCar(string id){
+    public Car? GetCar(string id){
         string sql = "SELECT Car.* FROM Car WHERE CarId = @Id";
-        return connection.Query<Car>(sql, new{Id = id});
+        return connection.QueryFirstOrDefault<Car>(sql, new{Id = id});
     }
     public IEnumerable<Car>? GetCarsByMemberId(string id){
         return connection.Query<Car>("SELECT * FROM Car WHERE MemberId = @Id", new{Id = id});
@@ -43,7 +43,8 @@ public class CarRepository : BaseRepository
         });
     }
     public int Edit(Car obj){
-        string sql = "UPDATE Car SET PricePerDay=@PricePerDay, Location=@Location WHERE CarId = @CarId";
+        string sql = "UPDATE Car SET MemberId=@MemberId, ManufacturerId=@ManufacturerId, CategoryId=@CategoryId, CarName = @CarName, ProducedYear=@ProducedYear,Color=@Color,NumberPlate=@NumberPlate, PricePerDay = @PricePerDay, Location=@Location, FuelId=@FuelId,GearboxId = @GearboxId,ImageUrl=@ImageUrl WHERE CarId = @CarId";
+        //string sql = "UPDATE Car SET CarName = @CarName, "
         return connection.Execute(sql, obj);
     }
     public int Delete(string id){

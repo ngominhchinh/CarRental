@@ -13,15 +13,7 @@ public class CategoryRepository : BaseRepository
         return await Add("category", obj);
     }
     public async Task<int> Edit(Category obj)
-    {
-        // using HttpClient client = new HttpClient();
-        // client.BaseAddress = uri;
-        // HttpResponseMessage message = await client.PutAsJsonAsync<Category>("category", obj);
-        // if (message.IsSuccessStatusCode)
-        // {
-        //     return await message.Content.ReadFromJsonAsync<int>();
-        // }
-        // return -1;
+    {        
         return await FetchEdit("category", obj);
     }
     public async Task<int> Delete(byte id)

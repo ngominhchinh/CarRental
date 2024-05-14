@@ -19,14 +19,14 @@ public class CarController : BaseController{
         return null;
     }
     [HttpGet("{id}")]
-    public IEnumerable<Car>? GetCar(string id){
+    public Car? GetCar(string id){
         return Provider.Car.GetCar(id);
     }
     [HttpPost]
     public int Add(Car obj){
         return Provider.Car.Add(obj);
     }
-    [HttpPut("cars"),Authorize]
+    [HttpPut]
     public int Edit(Car obj){
         return Provider.Car.Edit(obj);
     }

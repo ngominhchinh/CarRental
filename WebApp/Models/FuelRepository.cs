@@ -7,7 +7,7 @@ public class FuelRepository : BaseRepository{
         return await FetchAll<Fuel>("fuel");
     }    
     public async Task<int> Add (Fuel obj){
-        return await Add("fuel",obj);
+        return await FetchAdd("fuel",obj);
     }
     public async Task<int> Edit(Fuel obj){
        return await FetchEdit("fuel",obj);

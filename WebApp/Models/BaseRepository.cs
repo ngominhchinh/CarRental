@@ -14,7 +14,7 @@ public abstract class BaseRepository{
         }
         return await client.GetFromJsonAsync<IEnumerable<T>>(url);
     }
-    public async  Task<int> Add<T>(string url, T obj){
+    public async  Task<int> FetchAdd<T>(string url, T obj){
         using HttpClient client = new HttpClient();
         client.BaseAddress = uri;
         HttpResponseMessage message = await client.PostAsJsonAsync<T>(url,obj);

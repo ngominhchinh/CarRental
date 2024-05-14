@@ -25,4 +25,6 @@ public class SiteProvider
     public MemberRepository Member => member ??= new MemberRepository(Connection);
     CarRepository car = null!;
     public CarRepository Car => car ??= new CarRepository(Connection);
+    BookingRepository booking = null!;
+    public BookingRepository Booking => booking ??= new BookingRepository(Connection);
 }
